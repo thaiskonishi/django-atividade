@@ -1,0 +1,136 @@
+header {
+    background-color: rgb(224, 75, 179);
+    padding: 10px 0;
+}
+#carrinho{
+    height: 50px;
+    width: 50px;
+}
+#botao-carrinho {
+    height: 60px;
+    width: 160px;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    padding-inline: 5px;
+    border-radius: 5px;
+}
+.navegacao {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 940px;
+    /*obs.: padrão usa 940px pq se adapta com telas maiores */
+    margin: 0 auto;
+}
+#logo{
+   width: 200px;
+   height: 180px;
+}
+
+nav {
+    position: relative;
+}
+nav li {
+    display: inline;
+    margin-left: 10 10 10 30px;
+}
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #c78c19;
+    /* text-decoration:underline ; */
+}
+li a {
+    padding-inline: 15px;
+}
+.sobre-nos{
+    padding-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+#slogan{
+    padding-left: 5%;
+    font-size:xx-large;
+    padding-top: 10%;
+    padding-right: 3%;
+    font-style: italic;
+}
+section h3{
+    font-size: xx-large;
+    font-style: oblique;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    color: #dd16bc;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2%;
+}
+.nosso-espaco div{    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2%;
+}
+.nosso-espaco div img{    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 30%;
+    padding-left: 3%;
+}
+.produtos-mais-vendidos h3{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2%;
+}
+.produtos-mais-vendidos .produtos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+.produtos-mais-vendidos .produto{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    padding: 20px 20px 20px 20px;
+}
+.produto {
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 4px;
+    margin: 15px;
+}
+.produtos-mais-vendidos .produto:hover{
+    color: #be4fbe;
+}
+
+footer{
+    background-color: rgb(179, 10, 136);
+    display: flex;
+    flex-direction: column;
+    justify-self: center ;
+    align-items: center;
+    padding-left: 40%;
+    padding-right: 30%;
+}
+
+#logotipo-footer{
+    height: 70px;    
+    width: 60px;
+    padding-top: 5%;
+}

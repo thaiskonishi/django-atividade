@@ -1,0 +1,15 @@
+{% load static %}
+
+<header>
+    <div class="navegacao">
+        <h2><img id="logo" src="{% static './assets/logo-padaria.png' %}" alt="logo do Padaria da Tia Rosa"></h2>
+        <nav>
+            <ul class="navegacao-menu">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'produtos' %}">Produtos</a></li>
+                <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+            </ul>
+        </nav>
+        <button id="botao-carrinho"><img id="carrinho" src="{% static './assets/adicionar-ao-carrinho.png' %}" alt="adicionar ao carrinho">Loja Virtual</button>
+    </div>
+</header>
