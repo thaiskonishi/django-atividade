@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from homepage.models import Fotografia
 
 # Create your views here.
 def index(request):
-    return render(request,'homepage/index.html')
+    fotografias = Fotografia.objects.all()
+    
+    return render(request,'homepage/index.html',{"cards": fotografias})
 
 #colocar sempre primeiro o request e depois o srquivo que quero renderizar
 def cadastro(request):

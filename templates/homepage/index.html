@@ -4,14 +4,12 @@
 {% block content %}
     <main>
         <section class="sobre-nos">
-            <!-- <div class="historia">
-                <img src="{% static './assets/tia-rosa.jpg' %}" alt="Um pouco sobre nosso café">
-            </div> -->
+
             <div id="slogan">
                 <p>"O dia não precisa ser perfeito para ser maravilhoso, mas com certeza precisa de um pãozinho com um bom café!"</p>
             </div>
             <div id="slogan">
-                <p>"O dia não precisa ser perfeito para ser maravilhoso, mas com certeza precisa de um pãozinho com um bom café!"</p>
+                <p>"Na padaria da Tia Rosa, você poderá desfrutar do mais tradicional ao revolucionário pão casseiro!"</p>
             </div>
         </section>
     <section class="nosso-espaco">
@@ -26,47 +24,19 @@
         </div>
     </section>
     <section class="produtos-mais-vendidos">
-        <h3>Produtos mais vendidos</h3>
+        <h3>Produtos Mais Vendidos</h3>
         <div class="produtos">
+            {% if cards%}
+            {% for fotografia in cards %}
             <div class="produto">
-                <img class="tipo-cafe" src="{% static './assets/pao-calabresa-redondo.jpg' %}" alt="café bourbon">
-                <p>Pão recheado com calabresa</p>
-                <p>R$2,50 / unidade</p>
+                <img class="tipo-cafe" src="{% static './assets/' %}{{ fotografia.foto}}" alt="foto pão de calabresa">
+                <p>{{fotografia.nome}}</p>
+                <p>{{fotografia.preco}}</p>
                 <button>adicionar no carrinho</button>
             </div>
-            <div class="produto">
-                <img class="tipo-cafe" src="{% static './assets/lanche-fitness.jpg' %}" alt="café frutado">
-                <p>Lanche fitness de peito de peru</p>
-                <p>R$10,50 / un</p>
-                <button>adicionar no carrinho</button>
-            </div>
-            <div class="produto">
-                <img class="tipo-cafe" src="{% static './assets/pao-frances.jpg' %}" alt="café blend">
-                <p>Pão francês</p>
-                <p>R$1,10 / unidade</p>
-                <button>adicionar no carrinho</button>
-            </div>
-            
-        </div>
-        <div class="produtos">
-            <div class="produto">
-                <img class="tipo-cafe" src="{% static './assets/pao-australiano.jpg' %}" alt="café bourbon">
-                <p>Pão australiando redondo</p>
-                <p>R$15,50 / unidade</p>
-                <button>adicionar no carrinho</button>
-            </div>
-            <div class="produto">
-                <img class="tipo-cafe" src="{% static './assets/pao-sete-graos.jpg' %}" alt="café frutado">
-                <p>Pão integral sete grãos</p>
-                <p>R$14,70 / un</p>
-                <button>adicionar no carrinho</button>
-            </div>
-            <div class="produto">
-                <img class="tipo-cafe" src="{% static './assets/pao-italiano.jpg' %}" alt="café blend">
-                <p>Pão italiano</p>
-                <p>R$13,50 / unidade</p>
-                <button>adicionar no carrinho</button>
-            </div>
+            {% endfor %}
+            {% else %}
+            {% endif %}
         </div>
     </section>
     </main>
